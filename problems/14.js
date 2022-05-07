@@ -7,7 +7,23 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
+    dict1 = {}
+    let max = 0;
+
+    for (const num of numbers) {
+        if (dict1[num] == null) {
+            dict1[num] = 1;
+        } else {
+            dict1[num] += 1;
+        }
+        
+        if (dict1[num] > max) {
+            if (dict1[num] >= (numbers.length/2)) {
+                max = num
+            }
+        }
+    }
+    return max
 }
 
 const tests = [

@@ -8,7 +8,12 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    let regStr = str.toUpperCase().split(" ").join("");
+    let reverseStr = str.toUpperCase().split(" ").join("").split('').reverse().join('');
+    if (regStr == reverseStr) {
+        return true;
+    }
+    return false
 }
 
 const tests = [
